@@ -2,30 +2,20 @@ import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/rea
 import Card from '../components/Card'
 import ExploreContainer from '../components/ExploreContainer';
 import './Tab1.css';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css'
+
 
 const genCards = [1,2,3,4]
 
 
-const Tab1: React.FC = () => {
+function myCalendar() {
   return (
-    <IonPage>
-      <IonHeader>
-        <IonToolbar>
-          <IonTitle>Tab 1</IonTitle>
-        </IonToolbar>
-      </IonHeader>
-      <IonContent fullscreen>
-        <IonHeader collapse="condense">
-          <IonToolbar>
-            <IonTitle size="large">Tab 1</IonTitle>
-          </IonToolbar>
-        </IonHeader>
-        {genCards.map((index) =>
-          <Card/>)}
-        <ExploreContainer name="Tab 1 page" />
-      </IonContent>
-    </IonPage>
-  );
-};
+    <div>
+      <h1>Calendar; add Google calendar support</h1>
+      <Calendar />
+    </div>
+  )
+}
 
-export default Tab1;
+export default myCalendar;
