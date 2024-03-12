@@ -10,8 +10,8 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, logoGoogle, logoPlaystation, square, triangle } from 'ionicons/icons';
-import Tab1 from './pages/Tab1';
+import { ellipse, logoGoogle, logoPlaystation, square, triangle, calendarNumber } from 'ionicons/icons';
+import Calendar from './pages/Calendar';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
@@ -34,6 +34,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+/*import Calendar from 'react-calendar';r*/
 
 setupIonicReact();
 
@@ -42,8 +43,8 @@ const App: React.FC = () => (
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route exact path="/tab1">
-            <Tab1 />
+          <Route path="/calendar">
+            <Calendar />
           </Route>
           <Route exact path="/tab2">
             <Tab2 />
@@ -55,15 +56,15 @@ const App: React.FC = () => (
             <Tab4 />
           </Route>
           <Route exact path="/">
-            <Redirect to="/tab1" />
+            <Redirect to="/calendar" />
           </Route>
           
         </IonRouterOutlet>
         <IonTabBar slot="bottom">
 
-          <IonTabButton tab="tab1" href="/tab1">
-            <IonIcon aria-hidden="true" icon={triangle} />
-            <IonLabel>Tab 1</IonLabel>
+          <IonTabButton tab="calendar" href="/calendar">
+            <IonIcon aria-hidden="true" icon={calendarNumber} />
+            <IonLabel>Calendar</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="tab2" href="/tab2">
