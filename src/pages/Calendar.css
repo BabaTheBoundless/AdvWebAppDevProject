@@ -1,15 +1,37 @@
+.container {
+    width: 90%;
+    max-width: 100%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+}
 .react-calendar {
     width: 90%;
     max-width: 100%;
     background: white;
-    border: 1px solid #a0a096;
+    border: 3px solid #000000;
+    border-radius: 50px;
     font-family: Arial, Helvetica, sans-serif;
-    line-height: 6em;
-    margin: 0 auto;
-  }
-  
+    line-height: 5em;
+    margin: auto;
+    margin-top: 10px;
+    position: ;
+    top: 0;
+
+    
+    
+    
+    
+    /* allows for our dates to conform with the circular nature of the border */
+    overflow: hidden;
+    
+
+    }
   .react-calendar--doubleView {
-    width: 700px;
+    width: 70px;
   }
   
   .react-calendar--doubleView .react-calendar__viewContainer {
@@ -47,8 +69,11 @@
     margin-bottom: 1em;
   }
   
+  /* displays month and year at top */
   .react-calendar__navigation button {
-    min-width: 44px;
+    font-size: 2em;
+    font-weight: bold;
+    min-width: 100px;
     background: none;
   }
   
@@ -79,7 +104,7 @@
     align-items: center;
     justify-content: center;
     font: inherit;
-    font-size: 0.75em;
+    font-size: 10em;
     font-weight: bold;
   }
   
@@ -108,6 +133,7 @@
     line-height: 16px;
     font: inherit;
     font-size: 1.5em;
+
   }
   
   .react-calendar__tile:disabled {
@@ -157,4 +183,4 @@
   .react-calendar--selectRange .react-calendar__tile--hover {
     background-color: #e6e6e6;
   }
-  
+
