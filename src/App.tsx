@@ -37,13 +37,14 @@ import './theme/variables.css';
 /*import Calendar from 'react-calendar';r*/
 
 setupIonicReact();
-
+/* replaced <Calendar /> with <Tab3 /> and changed it back and now it works but only until you refresh the page */
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
-          <Route path="/calendar">
+          <Route exact path="/calendar" >
+        
             <Calendar />
           </Route>
           <Route exact path="/tab2">
