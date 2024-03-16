@@ -38,10 +38,34 @@
   }
   
   /* styling for utton */
-  .EventChange .ion-button {
-    margin: 10px auto;
-    display: block;
-    width: 80%;
-    max-width: 200px;
+  .custom-button {
+    color: beige;
+   
+    --background: #0026ff;
+    
+    margin: 15px auto;
+    max-width: 800px;
+
   }
+
+  .custom-button:hover {
+    --background: #0020d3f4;
+  }
+
+  .title-input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 3px solid #004ca9;
+    border-radius: 10px;
+    text-align: center;
+  }
+
+  .description-input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 3px solid #004ca9;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
   

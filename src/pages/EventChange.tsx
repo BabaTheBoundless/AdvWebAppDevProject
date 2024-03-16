@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar, IonButton, IonInput, IonDatetime } from '@ionic/react';
 import Calendar from 'react-calendar';
-import './Calendar.css';
+//import './Calendar.css';
+import './EventChange.css';
 
 function EventChange() {
   //manage date
@@ -24,6 +25,7 @@ function EventChange() {
       [name]: value
     }));
   };
+
 
   const handleEventCreation = () => {
     //handles event creation
@@ -57,12 +59,14 @@ function EventChange() {
           placeholder="Title"
           value={eventData.title}
           onIonChange={handleInputChange}
+          className="title-input"
         />
         <IonInput
           name="description"
           placeholder="Description"
           value={eventData.description}
           onIonChange={handleInputChange}
+          className="description-input"
         />
         <IonInput
           name="time"
@@ -71,9 +75,9 @@ function EventChange() {
           value={time}
           onIonChange={(e) => setTime(e.detail.value)}
         />
-        <IonButton expand="block" onClick={handleEventCreation}>Create Event</IonButton>
+        <IonButton expand="block" onClick={handleEventCreation} className="custom-button">Create Event</IonButton>
       </IonContent>
-    </IonPage>
+    </IonPage> 
   );
 }
 
