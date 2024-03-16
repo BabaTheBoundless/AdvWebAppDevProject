@@ -1,0 +1,47 @@
+/* Calendar container */
+.EventChange .react-calendar {
+    width: 100%;
+    max-width: 300px; /* Adjust width as needed */
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* calendar nav button */
+  .EventChange .react-calendar__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  /* calendar nav button style */
+  .EventChange .react-calendar__navigation__label {
+    font-weight: bold;
+  }
+  
+  /* calendar tile style */
+  .EventChange .react-calendar__tile {
+    padding: 5px;
+    border-radius: 50%;
+  }
+  
+  /* calendar tile style for active */
+  .EventChange .react-calendar__tile--active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  /* syling for input field */
+  .EventChange .ion-input {
+    margin: 10px 0;
+  }
+  
+  /* styling for utton */
+  .EventChange .ion-button {
+    margin: 10px auto;
+    display: block;
+    width: 80%;
+    max-width: 200px;
+  }
+  

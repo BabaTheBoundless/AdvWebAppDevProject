@@ -12,9 +12,9 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { ellipse, logoGoogle, logoPlaystation, square, triangle, calendarNumber } from 'ionicons/icons';
 import Calendar from './pages/Calendar';
-import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
+import EventChange from './pages/EventChange';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -37,7 +37,7 @@ import './theme/variables.css';
 /*import Calendar from 'react-calendar';r*/
 
 setupIonicReact();
-/* replaced <Calendar /> with <Tab3 /> and changed it back and now it works but only until you refresh the page */
+//replaced <Calendar /> with <Tab3 /> and changed it back and now it works but only until you refresh the page 
 const App: React.FC = () => (
   <IonApp>
     <IonReactRouter>
@@ -47,8 +47,8 @@ const App: React.FC = () => (
         
             <Calendar />
           </Route>
-          <Route exact path="/tab2">
-            <Tab2 />
+          <Route exact path="/eventchange">
+            <EventChange />
           </Route>
           <Route path="/tab3">
             <Tab3 />
@@ -68,9 +68,9 @@ const App: React.FC = () => (
             <IonLabel>Calendar</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab2" href="/tab2">
+          <IonTabButton tab="eventchange" href="/eventchange">
             <IonIcon aria-hidden="true" icon={ellipse} />
-            <IonLabel>Tab 2</IonLabel>
+            <IonLabel>Create Event</IonLabel>
           </IonTabButton>
 
           <IonTabButton tab="tab3" href="/tab3">

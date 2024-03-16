@@ -7,7 +7,7 @@
     justify-content: center;
     align-items: center;
 
-    /* seemingly the only manditory one */
+    /* seemingly the only manditory one; need to test on other computer monitors */
     height: 100%;
 }
 .react-calendar {
