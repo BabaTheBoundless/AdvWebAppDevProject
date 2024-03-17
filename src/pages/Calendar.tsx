@@ -1,7 +1,6 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
 import { useEffect, useState } from 'react';
 
-
 import './Calendar.css';
 import Calendar from 'react-calendar';
 
@@ -27,7 +26,7 @@ function MyApp() {
 
   return (
     <IonPage>
-    
+  
       <IonContent>
         <Calendar onChange={handleDateChange} value={value} />
       </IonContent>

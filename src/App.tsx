@@ -1,4 +1,4 @@
-import { Redirect, Route } from 'react-router-dom';
+import { Redirect, Route, Link } from 'react-router-dom';
 import {
   IonApp,
   IonIcon,
@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, logoGoogle, logoPlaystation, square, triangle, calendarNumber } from 'ionicons/icons';
+import { ellipse, logoGoogle, logoPlaystation, square, basketball, calendarNumber } from 'ionicons/icons';
 import Calendar from './pages/Calendar';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
@@ -36,15 +36,23 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 /*import Calendar from 'react-calendar';r*/
 
+
+
+function redirectURL() {
+  window.location.href="https://pokemondb.net/pokedex/hariyama";
+
+}
+
 setupIonicReact();
 //replaced <Calendar /> with <Tab3 /> and changed it back and now it works but only until you refresh the page 
 const App: React.FC = () => (
+  
   <IonApp>
     <IonReactRouter>
       <IonTabs>
         <IonRouterOutlet>
           <Route exact path="/calendar" >
-        
+      
             <Calendar />
           </Route>
           <Route exact path="/eventchange">
@@ -69,7 +77,7 @@ const App: React.FC = () => (
           </IonTabButton>
 
           <IonTabButton tab="eventchange" href="/eventchange">
-            <IonIcon aria-hidden="true" icon={ellipse} />
+            <IonIcon aria-hidden="true" icon={basketball} />
             <IonLabel>Create Event</IonLabel>
           </IonTabButton>
 
@@ -78,15 +86,16 @@ const App: React.FC = () => (
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab4" href="/tab4">
+          <IonTabButton tab="tab4" onClick={redirectURL}>
             <IonIcon aria-hidden="true" icon={logoPlaystation} />
-            <IonLabel>Tab 4</IonLabel>
+            <IonLabel>Github</IonLabel>
           </IonTabButton>
 
         </IonTabBar>
       </IonTabs>
     </IonReactRouter>
   </IonApp>
+
 );
 
 export default App;
