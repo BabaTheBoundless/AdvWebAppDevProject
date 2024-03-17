@@ -53,19 +53,33 @@
   }
 
   .title-input {
-    margin: 10px 0;
     padding: 10px;
     border: 3px solid #004ca9;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 1px 1px 1px rgb(158, 157, 157);
+    margin: 15px auto;
+    max-width: 800px;
   }
 
   .description-input {
-    margin: 10px 0;
     padding: 10px;
     border: 3px solid #004ca9;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 1px 1px 1px rgb(158, 157, 157);
+    margin: 15px auto;;
+    max-width: 800px;
+  }
+
+  .time-input {
+    padding: 10px;
+    margin: 10px auto;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 800px;
+
+    
   }
   
   

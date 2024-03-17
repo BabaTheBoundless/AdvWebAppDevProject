@@ -1,7 +1,7 @@
 import { IonContent, IonHeader, IonPage, IonTitle, IonToolbar } from '@ionic/react';
-import { useState } from 'react';
-import Card from '../components/Card'
-import ExploreContainer from '../components/ExploreContainer';
+import { useEffect, useState } from 'react';
+
+
 import './Calendar.css';
 import Calendar from 'react-calendar';
 
@@ -12,13 +12,26 @@ type ValuePiece = Date | null;
 type Value = ValuePiece | [ValuePiece, ValuePiece];
 
 function MyApp() {
-  const [value, onChange] = useState<Value>(new Date());
+  const [value, setValue] = useState<Value>(new Date());
+
+  useEffect(() => {
+    return () => {
+      setValue(new Date())
+    };
+  }, []);
+
+  const handleDateChange = (newValue: Value) => {
+    setValue(newValue);
+
+  };
 
   return (
-    <div>
-      <Calendar onChange={onChange} value={value} />
-    </div>
+    <IonPage>
+    
+      <IonContent>
+        <Calendar onChange={handleDateChange} value={value} />
+      </IonContent>
+    </IonPage>
   );
 }
-
 export default MyApp;

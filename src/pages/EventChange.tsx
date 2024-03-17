@@ -46,9 +46,7 @@ function EventChange() {
 
   return (
     <IonPage>
-      <IonHeader>
 
-      </IonHeader>
       <IonContent>
         <Calendar
           onChange={handleDateChange}
@@ -56,7 +54,7 @@ function EventChange() {
         />
         <IonInput
           name="title"
-          placeholder="Title"
+          placeholder="Event Title"
           value={eventData.title}
           onIonChange={handleInputChange}
           className="title-input"
@@ -74,6 +72,7 @@ function EventChange() {
           type="time"
           value={time}
           onIonChange={(e) => setTime(e.detail.value)}
+          className="time-input"
         />
         <IonButton expand="block" onClick={handleEventCreation} className="custom-button">Create Event</IonButton>
       </IonContent>
