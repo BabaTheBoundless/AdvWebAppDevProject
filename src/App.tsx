@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, logoGoogle, logoPlaystation, square, basketball, calendarNumber } from 'ionicons/icons';
+import { logoGithub, logoPlaystation, square, basketball, calendarNumber } from 'ionicons/icons';
 import Calendar from './pages/Calendar';
 import Tab3 from './pages/Tab3';
 import Tab4 from './pages/Tab4';
@@ -39,7 +39,7 @@ import './theme/variables.css';
 
 
 function redirectURL() {
-  window.location.href="https://pokemondb.net/pokedex/hariyama";
+  window.location.href="https://github.com/BabaTheBoundless/AdvWebAppDevProject";
 
 }
 
@@ -86,8 +86,8 @@ const App: React.FC = () => (
             <IonLabel>Tab 3</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab4" onClick={redirectURL}>
-            <IonIcon aria-hidden="true" icon={logoPlaystation} />
+          <IonTabButton tab="github" onClick={redirectURL}>
+            <IonIcon aria-hidden="true" icon={logoGithub} />
             <IonLabel>Github</IonLabel>
           </IonTabButton>
 
