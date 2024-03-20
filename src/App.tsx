@@ -12,8 +12,7 @@ import {
 import { IonReactRouter } from '@ionic/react-router';
 import { logoGithub, logoPlaystation, square, basketball, calendarNumber } from 'ionicons/icons';
 import Calendar from './pages/Calendar';
-import Tab3 from './pages/Tab3';
-import Tab4 from './pages/Tab4';
+
 import EventChange from './pages/EventChange';
 
 /* Core CSS required for Ionic components to work properly */
@@ -58,12 +57,7 @@ const App: React.FC = () => (
           <Route exact path="/eventchange">
             <EventChange />
           </Route>
-          <Route path="/tab3">
-            <Tab3 />
-          </Route>
-          <Route exact path="/tab4">
-            <Tab4 />
-          </Route>
+
           <Route exact path="/">
             <Redirect to="/calendar" />
           </Route>
@@ -81,10 +75,7 @@ const App: React.FC = () => (
             <IonLabel>Create Event</IonLabel>
           </IonTabButton>
 
-          <IonTabButton tab="tab3" href="/tab3">
-            <IonIcon aria-hidden="true" icon={square} />
-            <IonLabel>Tab 3</IonLabel>
-          </IonTabButton>
+   
 
           <IonTabButton tab="github" onClick={redirectURL}>
             <IonIcon aria-hidden="true" icon={logoGithub} />
