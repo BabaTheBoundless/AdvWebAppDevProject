@@ -1,3 +1,30 @@
+
+  /* light mdoe */
+  .app-light {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+  }
+
+
+  /* dark mode */
+  .app-dark{
+    --ion-background-color: #000000;
+    --ion-text-color: #ffffff;
+  }
+
+
+  .light-or-dark {
+    background-color: var(--ion-background-color);
+    color: var(--ion-text-color);
+  }
+
+
+
+    
+  
+
+
+
 .container {
     /*width: 90%;
     max-width: 100%;*/
@@ -11,16 +38,14 @@
     height: 100%;
     
 }
-body {
-  background-color: #000000;
-}
+
 .react-calendar {
     
     width: 80%;
     max-width: 65em;
     
-    background: white;
-    border: 3px solid #000000;
+    background: var(--ion-background-color);
+    border: 3px solid var(--ion-text-color);
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     line-height: 5em;
@@ -138,11 +163,12 @@ body {
     line-height: 16px;
     font: inherit;
     font-size: 1.5em;
+    color: var(--ion-text-color);
     
   }
   
   .react-calendar__tile:disabled {
-    background-color: #f0f0f0;
+    background-color: #a9d4ff;
     color: #ababab;
   }
   
@@ -191,30 +217,7 @@ body {
   }
 
 
-  .light-or-dark {
-    background-color: var(--ion-background-color);
-    color: var(--ion-text-color);
-  }
 
 
-
-
-
-
-  /* light mdoe */
-  .app-light {
-    --ion-background-color: #ffffff;
-    --ion-text-color: #000000;
-  }
-
-
-  /* dark mode */
-  .app-dark{
-    --ion-background-color: #000000;
-    --ion-text-color: #ffffff;
-  }
-
-    
-  
 
 
