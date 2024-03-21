@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { logoGithub, logoPlaystation, square, basketball, calendarNumber } from 'ionicons/icons';
+import { logoGithub, logoPlaystation, square, basketball, calendarNumber, body } from 'ionicons/icons';
 import Calendar from './pages/Calendar';
 
 import EventChange from './pages/EventChange';
@@ -33,6 +33,7 @@ import '@ionic/react/css/display.css';
 
 /* Theme variables */
 import './theme/variables.css';
+import { useState } from 'react';
 /*import Calendar from 'react-calendar';r*/
 
 
@@ -43,50 +44,74 @@ function redirectURL() {
 }
 
 setupIonicReact();
-//replaced <Calendar /> with <Tab3 /> and changed it back and now it works but only until you refresh the page 
-const App: React.FC = () => (
-  
-  <IonApp>
-    <IonReactRouter>
-      <IonTabs>
-        <IonRouterOutlet>
-          <Route exact path="/calendar" >
-      
-            <Calendar />
-          </Route>
-          <Route exact path="/eventchange">
-            <EventChange />
-          </Route>
 
-          <Route exact path="/">
-            <Redirect to="/calendar" />
-          </Route>
-          
-        </IonRouterOutlet>
-        <IonTabBar slot="bottom">
+//light and dark mode
+const App: React.FC = () => {
 
-          <IonTabButton tab="calendar" href="/calendar">
-            <IonIcon aria-hidden="true" icon={calendarNumber} />
-            <IonLabel>Calendar</IonLabel>
-          </IonTabButton>
+  const [mode, setMode] = useState <'light' | 'dark'> ('light');
 
-          <IonTabButton tab="eventchange" href="/eventchange">
-            <IonIcon aria-hidden="true" icon={basketball} />
-            <IonLabel>Create Event</IonLabel>
-          </IonTabButton>
+  //switches between light and dark
+  const toggle = () => {
+    console.log('its working')
+    const setNewMode = mode === 'light' ? 'dark' : 'light';
+    setMode(setNewMode);
+  };
 
-   
 
-          <IonTabButton tab="github" onClick={redirectURL}>
-            <IonIcon aria-hidden="true" icon={logoGithub} />
-            <IonLabel>Github</IonLabel>
-          </IonTabButton>
 
-        </IonTabBar>
-      </IonTabs>
-    </IonReactRouter>
-  </IonApp>
 
-);
+
+  return (
+    
+    <IonApp className={`app-${mode}`}>
+      <IonReactRouter>
+        <IonTabs>
+          <IonRouterOutlet>
+            <Route exact path="/calendar" >
+        
+              <Calendar />
+            </Route>
+            <Route exact path="/eventchange">
+              <EventChange />
+            </Route>
+
+            <Route exact path="/">
+              <Redirect to="/calendar" />
+            </Route>
+            
+          </IonRouterOutlet>
+          <IonTabBar slot="bottom">
+
+            <IonTabButton tab="calendar" href="/calendar">
+              <IonIcon aria-hidden="true" icon={calendarNumber} />
+              <IonLabel>Calendar</IonLabel>
+            </IonTabButton>
+
+            <IonTabButton tab="eventchange" href="/eventchange">
+              <IonIcon aria-hidden="true" icon={basketball} />
+              <IonLabel>Create Event</IonLabel>
+            </IonTabButton>
+
+    
+
+            <IonTabButton tab="github" onClick={redirectURL}>
+              <IonIcon aria-hidden="true" icon={logoGithub} />
+              <IonLabel>Github</IonLabel>
+            </IonTabButton>
+            <IonTabButton tab="theme" onClick={toggle}> 
+
+              <IonLabel>Toggle Bright</IonLabel>
+            </IonTabButton>
+
+            
+
+          </IonTabBar>
+        </IonTabs>
+      </IonReactRouter>
+    </IonApp>
+
+  );
+  };
+
 
 export default App;

@@ -5,9 +5,9 @@ import Calendar from 'react-calendar';
 import './EventChange.css';
 
 function EventChange() {
-  //manage date
+  //manages date
   const [date, setDate] = useState(new Date());
-  //manage time
+  //manages time
   const [time, setTime] = useState(''); 
   const [eventData, setEventData] = useState({
     title: '',
@@ -21,6 +21,7 @@ function EventChange() {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setEventData(prevData => ({
+      //prevData into new object
       ...prevData,
       [name]: value
     }));
@@ -30,8 +31,11 @@ function EventChange() {
   const handleEventCreation = () => {
     //handles event creation
     console.log('Event created:', {
+      //prevData into new object
       ...eventData,
-      datetime: new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.split(':')[0], time.split(':')[1]).toISOString() // Combine selected date and time into a single datetime string
+       
+       //put date and time into one string
+      datetime: new Date(date.getFullYear(), date.getMonth(), date.getDate(), time.split(':')[0], time.split(':')[1]).toISOString()
     });
     //gets rid of the entered form firleds
     setEventData({

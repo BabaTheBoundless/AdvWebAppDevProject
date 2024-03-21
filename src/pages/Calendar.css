@@ -11,6 +11,9 @@
     height: 100%;
     
 }
+body {
+  background-color: #000000;
+}
 .react-calendar {
     
     width: 80%;
@@ -21,8 +24,9 @@
     border-radius: 50px;
     font-family: 'Montserrat', sans-serif;
     line-height: 5em;
-    margin: auto;
-    margin-top: 10px;
+  
+    margin: 0 auto;
+    margin-top: 5px;
     /* allows for our dates to conform with the circular nature of the border */
     overflow: hidden;
     box-shadow: 3px 3px 5px rgb(158, 157, 157);
@@ -186,6 +190,31 @@
     background-color: #e6e6e6;
   }
 
-  /* i think maybe the body should be a different color than the calendar but idk */
+
+  .light-or-dark {
+    background-color: var(--ion-background-color);
+    color: var(--ion-text-color);
+  }
+
+
+
+
+
+
+  /* light mdoe */
+  .app-light {
+    --ion-background-color: #ffffff;
+    --ion-text-color: #000000;
+  }
+
+
+  /* dark mode */
+  .app-dark{
+    --ion-background-color: #000000;
+    --ion-text-color: #ffffff;
+  }
+
+    
+  
 
 
