@@ -10,7 +10,7 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { logoGithub, logoPlaystation, square, basketball, calendarNumber, body } from 'ionicons/icons';
+import { logoGithub, sunny, basketball, calendarNumber, body } from 'ionicons/icons';
 import Calendar from './pages/Calendar';
 
 import EventChange from './pages/EventChange';
@@ -52,7 +52,6 @@ const App: React.FC = () => {
 
   //switches between light and dark
   const toggle = () => {
-    console.log('its working')
     const setNewMode = mode === 'light' ? 'dark' : 'light';
     setMode(setNewMode);
   };
@@ -92,14 +91,13 @@ const App: React.FC = () => {
               <IonLabel>Create Event</IonLabel>
             </IonTabButton>
 
-    
-
             <IonTabButton tab="github" onClick={redirectURL}>
               <IonIcon aria-hidden="true" icon={logoGithub} />
               <IonLabel>Github</IonLabel>
             </IonTabButton>
-            <IonTabButton tab="theme" onClick={toggle}> 
 
+            <IonTabButton tab="theme" onClick={toggle}>
+              <IonIcon aria-hidden="true" icon={sunny} />
               <IonLabel>Toggle Bright</IonLabel>
             </IonTabButton>
 
