@@ -45,11 +45,11 @@ function redirectURL() {
 
 setupIonicReact();
 
-//light and dark mode
+
 const App: React.FC = () => {
 
+  //light and dark mode
   const [mode, setMode] = useState <'light' | 'dark'> ('light');
-
   //switches between light and dark
   const toggle = () => {
     const setNewMode = mode === 'light' ? 'dark' : 'light';
@@ -81,6 +81,7 @@ const App: React.FC = () => {
           </IonRouterOutlet>
           <IonTabBar slot="bottom">
 
+            
             <IonTabButton tab="calendar" href="/calendar">
               <IonIcon aria-hidden="true" icon={calendarNumber} />
               <IonLabel>Calendar</IonLabel>
@@ -98,7 +99,7 @@ const App: React.FC = () => {
 
             <IonTabButton tab="theme" onClick={toggle}>
               <IonIcon aria-hidden="true" icon={sunny} />
-              <IonLabel>Toggle Bright</IonLabel>
+              <IonLabel>Toggle Theme</IonLabel>
             </IonTabButton>
 
             

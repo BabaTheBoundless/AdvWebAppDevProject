@@ -12,14 +12,8 @@
     --ion-background-color: #000000;
     --ion-text-color: #ffffff;
     --ion-hover-color: #2b2b2b;
+    
   }
-
-
-  .light-or-dark {
-    background-color: var(--ion-background-color);
-    color: var(--ion-text-color);
-  }
-
 
 
 .container {
@@ -193,10 +187,10 @@
   
   }
 
-  /* today's date; !important is seemingly unnecessary */
+  /* today's date */
   .react-calendar__tile--now {
     background: #ffff76;
-    color: #000000 !important;
+    color: #000000;
   }
   
   .react-calendar__tile--now:enabled:hover,
@@ -205,12 +199,14 @@
   }
   
   .react-calendar__tile--hasActive {
-    background: #76baff;
+    background: #0026ff;
+    color:#ffffff
   }
   
   .react-calendar__tile--hasActive:enabled:hover,
   .react-calendar__tile--hasActive:enabled:focus {
-    background: #a9d4ff;
+    background: #0020d3f4;
+    
   }
   
 
